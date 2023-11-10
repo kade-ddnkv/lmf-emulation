@@ -1,0 +1,59 @@
+00 1d 00 80 bb 00 00 04 00 0a 00 02 00 01 00 55 00 02 00 01 00 4a 00 80 99 00 40 0a 63 7e 02 16 34 74 7e 02 7e 00 68 01 00 54 2e 0a 01 c2 11 00 09 01 00 06 31 21 01 01 01 09 06 0b 00 0a 0b 00 0a 29 05 01 0c 01 01 02 22 01 01 81 79 00 06 09 20 41 01 01 09 7b 00 0d 80 00 0d 04 01 01 01 01 00 10 02 05 dc 25 17 03 6f 61 69 06 6d 6e 63 30 30 31 06 6d 63 63 30 30 31 04 67 70 72 73 12 0a 00 20 2f 00 00 04 00 82 00 0a 0c 54 0b e4 00 30 54 0b e4 00 00 8b 00 0a 01 f0 c0 a8 46 86 00 00 00 01 00 86 00 01 00 00 88 00 07 00 09 00 00 09 00 00 00 6e 40 0a 0c 3b 9a ca 00 30 3b 9a ca 00
+
+ПОЧЕМУ CRITICALITY = REJECT ЭТО 00 02????? Оно ведь первое в enumerated...
+
+InitiatingMessage ::= {
+    procedureCode: 29
+    criticality: 0 (reject)
+    value: PDUSessionResourceSetupRequest ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            PDUSessionResourceSetupRequestIEs ::= {
+                id: 10
+                criticality: 0 (reject)
+                value: 1
+            }
+            PDUSessionResourceSetupRequestIEs ::= {
+                id: 85
+                criticality: 0 (reject)
+                value: 1
+            }
+            PDUSessionResourceSetupRequestIEs ::= {
+                id: 74
+                criticality: 0 (reject)
+                value: PDUSessionResourceSetupListSUReq ::= {
+                    PDUSessionResourceSetupItemSUReq ::= {
+                        pDUSessionID: 10
+                        pDUSessionNAS-PDU:
+                            7E 02 16 34 74 7E 02 7E 00 68 01 00 54 2E 0A 01
+                            C2 11 00 09 01 00 06 31 21 01 01 01 09 06 0B 00
+                            0A 0B 00 0A 29 05 01 0C 01 01 02 22 01 01 81 79
+                            00 06 09 20 41 01 01 09 7B 00 0D 80 00 0D 04 01
+                            01 01 01 00 10 02 05 DC 25 17 03 6F 61 69 06 6D
+                            6E 63 30 30 31 06 6D 63 63 30 30 31 04 67 70 72
+                            73 12 0A
+                        s-NSSAI: S-NSSAI ::= {
+                            sST: 01
+                        }
+                        pDUSessionResourceSetupRequestTransfer:
+                            00 00 04 00 82 00 0A 0C 54 0B E4 00 30 54 0B E4
+                            00 00 8B 00 0A 01 F0 C0 A8 46 86 00 00 00 01 00
+                            86 00 01 00 00 88 00 07 00 09 00 00 09 00 00
+                    }
+                }
+            }
+            PDUSessionResourceSetupRequestIEs ::= {
+                id: 110
+                criticality: 1 (ignore)
+                value: UEAggregateMaximumBitRate ::= {
+                    uEAggregateMaximumBitRateDL: 1000000000
+                    uEAggregateMaximumBitRateUL: 1000000000
+                }
+            }
+        }
+    }
+}
+
+
+7E 02 16 34 74 7E 02 7E 00 68 01 00 54 2E 0A 01 C2 11 00 09 01 00 06 31 21 01 01 01 09 06 0B 00 0A 0B 00 0A 29 05 01 0C 01 01 02 22 01 01 81 79 00 06 09 20 41 01 01 09 7B 00 0D 80 00 0D 04 01 01 01 01 00 10 02 05 DC 25 17 03 6F 61 69 06 6D 6E 63 30 30 31 06 6D 63 63 30 30 31 04 67 70 72 73 12 0A
+
+{"n1MessageContainer":{"n1MessageClass":"SM","n1MessageContent":{"contentId":"n1SmMsg"}},"n1n2FailureTxfNotifURI":"http://oai-smf:8080/nsmf-pdusession/v1/callback/N1N2MsgTxfrFailureNotification/imsi-001010000000001","n2InfoContainer":{"n2InformationClass":"SM","smInfo":{"n2InfoContent":{"ngapData":{"contentId":"n2msg"},"ngapIeType":"PDU_RES_SETUP_REQ"},"pduSessionId":10,"sNssai":{"sd":"16777215","sst":1}}},"pduSessionId":10}

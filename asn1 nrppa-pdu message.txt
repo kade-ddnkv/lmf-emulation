@@ -1,0 +1,77 @@
+OTDOA Information Request:
+
+NRPPA-PDU ::= {
+	InitiatingMessage ::= {
+		procedureCode: 6
+		criticality: 0
+		nrppatransactionID: 0
+		value: OTDOAInformationRequest ::= {
+			protocolIEs: ProtocolIE-Container ::= {
+                OTDOAInformationRequest-IEs ::= {
+                    id: ??
+                    criticality: 0
+                    value: 
+                }
+            }
+		}
+	}
+}
+
+id-oTDOAInformationExchange ProcedureCode ::= 6
+nrppatransactionID определяется мной, нужно для сопоставления.
+Какие мне данные минимально нужны для получения OTDOA?
+
+
+Criticality ::= ENUMERATED { reject, ignore, notify }
+Presence ::= ENUMERATED { optional, conditional, mandatory }
+id-positioningInformationExchange ProcedureCode ::= 9
+id-RequestedSRSTransmissionCharacteristics = 12
+id-UEReportingInformation ::= 73
+id-UE-TEG-Info-Request ::= 90
+
+
+Positioning Information Request (SRS):
+
+NRPPA-PDU ::= {
+	InitiatingMessage ::= {
+		procedureCode: 9
+		criticality: reject
+		nrppatransactionID: 0
+		value: PositioningInformationRequest ::= {
+			protocolIEs: ProtocolIE-Container ::= {
+                PositioningInformationRequest-IEs ::= {
+                    id: 12
+                    criticality: ignore
+                    value: ??
+                    presence: optional
+                }
+                PositioningInformationRequest-IEs ::= {
+                    id: 73
+                    criticality: ignore
+                    value: ??
+                    presence: optional
+                }
+                PositioningInformationRequest-IEs ::= {
+                    id: 90
+                    criticality: ignore
+                    value: ??
+                    presence: optional
+                }
+            }
+		}
+	}
+}
+
+NRPPA-PDU ::= {
+	InitiatingMessage ::= {
+		procedureCode: 9
+		criticality: reject
+		nrppatransactionID: 0
+		value: PositioningInformationRequest ::= {
+			protocolIEs: ProtocolIE-Container ::= {
+            }
+		}
+	}
+}
+
+00 09 00 02 00 00
