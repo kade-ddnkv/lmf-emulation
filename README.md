@@ -5,3 +5,5 @@ _asn1 ngap-pdu_ - выгрузил логи из сообщения N1N2MessageT
 
 _n1n2_post_nrppa_ - пытаюсь запросить N1N2MessageTransfer в AMF  
 _n2_post_nrppa_ - пытаюсь запросить NonUEN2MessageTransfer в AMF  
+
+test_nrppa.c - пытаюсь закодировать ASN1 NRPPA сообщение в APER кодировке (т.к. в ней работает OAI)
