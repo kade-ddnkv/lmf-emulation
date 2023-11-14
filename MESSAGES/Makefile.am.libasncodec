@@ -1,0 +1,817 @@
+ASN_MODULE_SRCS=	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NRPPA-PDU.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_InitiatingMessage.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SuccessfulOutcome.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UnsuccessfulOutcome.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementInitiationRequest.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementInitiationResponse.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementInitiationFailure.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementFailureIndication.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementReport.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementTerminationCommand.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOAInformationRequest.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOA-Information-Type.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOA-Information-Type-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOAInformationResponse.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOAInformationFailure.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationControl.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationFeedback.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ErrorIndication.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateMessage.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationRequest.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationResponse.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationFailure.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationUpdate.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementRequest.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementResponse.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementFailure.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementReport.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementUpdate.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementAbort.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementFailureIndication.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationRequest.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationResponse.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationFailure.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningActivationRequest.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSType.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SemipersistentSRS.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AperiodicSRS.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningActivationResponse.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningActivationFailure.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningDeactivation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AbortTransmission.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ActiveULBWP.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ActivationTime.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AdditionalPathList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AdditionalPathListItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AperiodicSRSResourceTriggerList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AperiodicSRSResourceTrigger.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Assistance-Information.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationFailureList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationMetaData.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BandwidthSRS.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BCCH.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Broadcast.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BroadcastPeriodicity.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningBroadcastCells.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BSSID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Cause.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CauseMisc.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CauseProtocol.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CauseRadioNetwork.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Cell-Portion-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CGI-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CGI-NR.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CPLength-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CriticalityDiagnostics.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CriticalityDiagnostics-IE-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-Bandwidth-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRS.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRSMutingPattern.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DLPRSResourceCoordinates.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DLPRSResourceSetARP.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRSResourceSetARPLocation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DLPRSResourceARP.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRSResourceARPLocation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CID-MeasurementResult.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_EUTRACellIdentifier.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_EARFCN.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_GeographicalCoordinates.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_GNB-RxTxTimeDiff.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_GNBRxTxTimeDiffMeas.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_HESSID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_LCG-to-GCS-TranslationItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_LocationUncertainty.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Measurement-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementBeamInfoRequest.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementBeamInfo.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementPeriodicity.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementQuantities.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementQuantities-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementQuantitiesValue.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasuredResults.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasuredResultsValue.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NarrowBandIndex.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NG-RANAccessPointPosition.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NGRANHighAccuracyAccessPointPosition.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NG-RAN-CGI.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NG-RANCell.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-ARFCN.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NRCellIdentifier.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-PCI.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-PRS-Beam-Information.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-PRS-Beam-InformationItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfAntennaPorts-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfDlFrames-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfDlFrames-Extended-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfFrequencyHoppingBands.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NZP-CSI-RS-ResourceID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOACells.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOACell-Information.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOACell-Information-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOA-Information-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementQuantities.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementQuantities-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementQuantitiesValue.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementResult.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasuredResultsValue.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Outcome.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PathlossReferenceInformation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PathlossReferenceSignal.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PCI-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PhysCellIDGERAN.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PhysCellIDUTRA-FDD.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PhysCellIDUTRA-TDD.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PLMN-Identity.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PeriodicityList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PeriodicityItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSIBs.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSIB-Segments.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSIB-Type.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResource-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResource-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResourceSet-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResourceID-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResourceSet-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetType.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetTypePeriodic.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetTypeSemi-persistent.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetTypeAperiodic.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-Bandwidth-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSAngleItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSInformationPos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSConfiguration.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-ConfigurationIndex-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-ID-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMutingConfiguration-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSOccasionGroup-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSFrequencyHoppingConfiguration-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMuting.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMutingOption1.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMutingOption2.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-QCLInfo.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-QCLSourcePRSInfo.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResourceSet-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResourceSet-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-Resource-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-Resource-Set-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ReferenceSignal.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ReferencePoint.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CoordinateID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RelativeGeodeticLocation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RelativeCartesianLocation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RelativePathDelay.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ReportCharacteristics.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RequestedSRSTransmissionCharacteristics.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSet-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetType.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetTypePeriodic.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetTypeSemi-persistent.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetTypeAperiodic.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceType.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypePeriodic.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeSemi-persistent.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeAperiodic.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypePos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypePeriodicPos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeSemi-persistentPos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeAperiodicPos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP-PerCSI-RS.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP-PerCSI-RS-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ-PerCSI-RS.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ-PerCSI-RS-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultEUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultEUTRA-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRP-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRP-EUTRA-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRQ-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRQ-EUTRA-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP-PerSSB.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP-PerSSB-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ-PerSSB.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ-PerSSB-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultGERAN.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultGERAN-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultNR.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultNR-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultUTRAN.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultUTRAN-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RSSI.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SCS-SpecificCarrier.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Search-window-information.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SFNInitialisationTime.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SFNInitialisationTime-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SlotNumber.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialDirectionInformation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationInfo.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationforResourceID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationforResourceIDItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationPos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSConfig.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSCarrier-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSCarrier-List-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSConfiguration.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSPosResourceID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResource.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResource-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSet-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceID-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSet.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSetID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceTrigger.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSSpatialRelation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBInfo.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBInfoList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSB.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBPos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBBurstPosition.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSB-Index.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SystemFrameNumber.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SystemInformation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TAC.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TDD-Config-EUTRA-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TF-Configuration.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TimeStamp.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TimeStampSlotIndex.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TP-ID-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TP-Type-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TransmissionComb.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TransmissionCombPos.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPMeasurementQuantities.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPMeasurementQuantitiesList-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPMeasurementQuantities-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementResult.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementResultItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasuredResultsValue.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementQuality.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementTimingQuality.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementAngleQuality.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementRequestList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementRequestItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementResponseList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementResponseItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformation.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationTypeList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationTypeItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPItem.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionDefinitionType.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionDirect.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionDirectAccuracy.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionReferenced.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPReferencePointType.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TypeOfError.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UARFCN.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UE-Measurement-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UTRA-EcN0.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UTRA-RSCP.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UL-AoA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UL-RTOAMeasurement.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ULRTOAMeas.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UL-SRS-RSRP.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UplinkChannelBW-PerSCS-List.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRP-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRQ-EUTRA.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRP-NR.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRQ-NR.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementQuantities.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementQuantities-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementQuantitiesValue.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementResult.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementResult-Item.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLAN-RSSI.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANBand.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANChannelList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANChannel.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANCountryCode.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANOperatingClass.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Criticality.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NRPPATransactionID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Presence.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateIE-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProcedureCode.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-ID.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TriggeringMessage.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-Container.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-Single-Container.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-Field.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-ContainerList.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolExtensionContainer.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolExtensionField.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateIE-Container.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateIE-Field.c	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_EXTERNAL.c
+
+ASN_MODULE_HDRS=	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NRPPA-PDU.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_InitiatingMessage.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SuccessfulOutcome.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UnsuccessfulOutcome.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementInitiationRequest.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementInitiationResponse.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementInitiationFailure.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementFailureIndication.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementReport.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CIDMeasurementTerminationCommand.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOAInformationRequest.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOA-Information-Type.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOA-Information-Type-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOAInformationResponse.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOAInformationFailure.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationControl.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationFeedback.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ErrorIndication.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateMessage.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationRequest.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationResponse.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationFailure.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningInformationUpdate.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementRequest.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementResponse.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementFailure.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementReport.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementUpdate.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementAbort.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementFailureIndication.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationRequest.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationResponse.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationFailure.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningActivationRequest.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSType.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SemipersistentSRS.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AperiodicSRS.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningActivationResponse.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningActivationFailure.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningDeactivation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AbortTransmission.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ActiveULBWP.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ActivationTime.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AdditionalPathList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AdditionalPathListItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AperiodicSRSResourceTriggerList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AperiodicSRSResourceTrigger.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Assistance-Information.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationFailureList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_AssistanceInformationMetaData.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BandwidthSRS.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BCCH.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Broadcast.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BroadcastPeriodicity.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PositioningBroadcastCells.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_BSSID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Cause.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CauseMisc.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CauseProtocol.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CauseRadioNetwork.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Cell-Portion-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CGI-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CGI-NR.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CPLength-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CriticalityDiagnostics.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CriticalityDiagnostics-IE-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-Bandwidth-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRS.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRSMutingPattern.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DLPRSResourceCoordinates.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DLPRSResourceSetARP.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRSResourceSetARPLocation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DLPRSResourceARP.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_DL-PRSResourceARPLocation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_E-CID-MeasurementResult.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_EUTRACellIdentifier.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_EARFCN.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_GeographicalCoordinates.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_GNB-RxTxTimeDiff.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_GNBRxTxTimeDiffMeas.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_HESSID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_LCG-to-GCS-TranslationItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_LocationUncertainty.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Measurement-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementBeamInfoRequest.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementBeamInfo.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementPeriodicity.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementQuantities.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementQuantities-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasurementQuantitiesValue.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasuredResults.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_MeasuredResultsValue.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NarrowBandIndex.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NG-RANAccessPointPosition.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NGRANHighAccuracyAccessPointPosition.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NG-RAN-CGI.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NG-RANCell.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-ARFCN.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NRCellIdentifier.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-PCI.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-PRS-Beam-Information.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NR-PRS-Beam-InformationItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfAntennaPorts-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfDlFrames-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfDlFrames-Extended-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NumberOfFrequencyHoppingBands.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NZP-CSI-RS-ResourceID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOACells.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOACell-Information.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOACell-Information-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OTDOA-Information-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementQuantities.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementQuantities-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementQuantitiesValue.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasurementResult.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_OtherRATMeasuredResultsValue.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Outcome.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PathlossReferenceInformation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PathlossReferenceSignal.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PCI-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PhysCellIDGERAN.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PhysCellIDUTRA-FDD.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PhysCellIDUTRA-TDD.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PLMN-Identity.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PeriodicityList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PeriodicityItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSIBs.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSIB-Segments.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSIB-Type.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResource-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResource-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResourceSet-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResourceID-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosSRSResourceSet-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetType.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetTypePeriodic.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetTypeSemi-persistent.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PosResourceSetTypeAperiodic.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-Bandwidth-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSAngleItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSInformationPos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSConfiguration.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-ConfigurationIndex-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-ID-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMutingConfiguration-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSOccasionGroup-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSFrequencyHoppingConfiguration-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMuting.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMutingOption1.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSMutingOption2.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-QCLInfo.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResource-QCLSourcePRSInfo.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResourceSet-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRSResourceSet-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-Resource-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-Resource-Set-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PRS-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ReferenceSignal.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ReferencePoint.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_CoordinateID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RelativeGeodeticLocation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RelativeCartesianLocation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RelativePathDelay.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ReportCharacteristics.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RequestedSRSTransmissionCharacteristics.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSet-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetType.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetTypePeriodic.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetTypeSemi-persistent.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceSetTypeAperiodic.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceType.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypePeriodic.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeSemi-persistent.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeAperiodic.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypePos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypePeriodicPos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeSemi-persistentPos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResourceTypeAperiodicPos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP-PerCSI-RS.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRP-PerCSI-RS-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ-PerCSI-RS.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultCSI-RSRQ-PerCSI-RS-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultEUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultEUTRA-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRP-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRP-EUTRA-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRQ-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultRSRQ-EUTRA-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP-PerSSB.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRP-PerSSB-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ-PerSSB.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultSS-RSRQ-PerSSB-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultGERAN.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultGERAN-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultNR.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultNR-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultUTRAN.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ResultUTRAN-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_RSSI.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SCS-SpecificCarrier.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Search-window-information.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SFNInitialisationTime.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SFNInitialisationTime-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SlotNumber.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialDirectionInformation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationInfo.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationforResourceID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationforResourceIDItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SpatialRelationPos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSConfig.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSCarrier-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSCarrier-List-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSConfiguration.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSPosResourceID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResource.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResource-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSet-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceID-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSet.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceSetID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSResourceTrigger.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SRSSpatialRelation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBInfo.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBInfoList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSB.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBPos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSBBurstPosition.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSB-Index.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SSID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SystemFrameNumber.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_SystemInformation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TAC.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TDD-Config-EUTRA-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TF-Configuration.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TimeStamp.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TimeStampSlotIndex.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TP-ID-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TP-Type-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TransmissionComb.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TransmissionCombPos.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPMeasurementQuantities.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPMeasurementQuantitiesList-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPMeasurementQuantities-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementResult.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementResultItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasuredResultsValue.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementQuality.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementTimingQuality.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TrpMeasurementAngleQuality.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementRequestList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementRequestItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementResponseList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-MeasurementResponseItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformation.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationTypeList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPInformationTypeItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPItem.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRP-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionDefinitionType.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionDirect.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionDirectAccuracy.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPPositionReferenced.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TRPReferencePointType.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TypeOfError.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UARFCN.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UE-Measurement-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UTRA-EcN0.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UTRA-RSCP.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UL-AoA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UL-RTOAMeasurement.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ULRTOAMeas.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UL-SRS-RSRP.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_UplinkChannelBW-PerSCS-List.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRP-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRQ-EUTRA.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRP-NR.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ValueRSRQ-NR.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementQuantities.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementQuantities-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementQuantitiesValue.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementResult.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANMeasurementResult-Item.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLAN-RSSI.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANBand.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANChannelList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANChannel.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANCountryCode.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_WLANOperatingClass.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Criticality.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_NRPPATransactionID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_Presence.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateIE-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProcedureCode.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-ID.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_TriggeringMessage.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-Container.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-Single-Container.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-Field.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolIE-ContainerList.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolExtensionContainer.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_ProtocolExtensionField.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateIE-Container.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_PrivateIE-Field.h	\
+	/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NRPPA_EXTERNAL.h
+
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ANY.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ANY.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OPEN_TYPE.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OPEN_TYPE.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/GraphicString.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/GraphicString.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeEnumerated.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeEnumerated.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OBJECT_IDENTIFIER.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OBJECT_IDENTIFIER.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_codecs_prim.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ObjectDescriptor.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ObjectDescriptor.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_SEQUENCE_OF.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_SEQUENCE_OF.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_SET_OF.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_SET_OF.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_OF.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_OF.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_application.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_application.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_ioc.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_system.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_codecs.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_internal.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_internal.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_bit_data.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_bit_data.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/BIT_STRING.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/BIT_STRING.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_codecs_prim.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ber_tlv_length.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ber_tlv_length.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ber_tlv_tag.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ber_tlv_tag.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_TYPE.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_TYPE.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constraints.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constraints.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ber_decoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/der_encoder.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ber_decoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/der_encoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ANY_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OPEN_TYPE_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_codecs_prim_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_OF_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_ber.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF_ber.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/xer_support.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/xer_decoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/xer_encoder.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/xer_support.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/xer_decoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/xer_encoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ANY_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/BIT_STRING_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeEnumerated_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OBJECT_IDENTIFIER_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OPEN_TYPE_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_codecs_prim_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_OF_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_xer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF_xer.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_decoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_encoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_support.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_opentype.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_decoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_encoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_support.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/per_opentype.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_decoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_encoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_support.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_opentype.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_decoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_encoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_support.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/uper_opentype.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ANY_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/BIT_STRING_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeEnumerated_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OPEN_TYPE_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_OF_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_uper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF_uper.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_decoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_encoder.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_support.h
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_opentype.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_decoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_encoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_support.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/aper_opentype.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ANY_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeEnumerated_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OPEN_TYPE_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_OF_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF_aper.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/BIT_STRING_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OBJECT_IDENTIFIER_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_print.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF_print.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_random_fill.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/asn_random_fill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/BIT_STRING_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OBJECT_IDENTIFIER_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_rfill.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF_rfill.c
+ASN_MODULE_HDRS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/jer_encoder.h
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/jer_encoder.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/ANY_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/BIT_STRING_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/INTEGER_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NULL_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeEnumerated_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/NativeInteger_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OBJECT_IDENTIFIER_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/OCTET_STRING_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_CHOICE_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_OF_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SEQUENCE_jer.c
+ASN_MODULE_SRCS+=/home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/constr_SET_OF_jer.c
+
+ASN_MODULE_CFLAGS=-DASN_DISABLE_OER_SUPPORT 
+
+lib_LTLIBRARIES+=libasncodec.la
+libasncodec_la_SOURCES=$(ASN_MODULE_SRCS) $(ASN_MODULE_HDRS)
+libasncodec_la_CPPFLAGS=-I$(top_srcdir)//home/kade-ddnkv/openairinterface5g/openair3/NRPPA/build/MESSAGES/
+libasncodec_la_CFLAGS=$(ASN_MODULE_CFLAGS)
+libasncodec_la_LDFLAGS=-lm

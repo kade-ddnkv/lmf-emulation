@@ -32,17 +32,20 @@ func main() {
 	CRLF := "\r\n"
 	json_format := "application/json"
 
-	json_part := `{ "n2InfoContainer":{
-		"n2InformationClass": "NRPPa",
-		"nrppaInfo": {
-			"nfId": "1",
-			"nrppaPdu": {
-				"ngapData": {
-					"contentId": "n2msg"
+	json_part := `{
+		"pduSessionId": 1,
+		"n2InfoContainer": {
+			"n2InformationClass": "NRPPa",
+			"nrppaInfo": {
+				"nfId": "lmf-emulator-0",
+				"nrppaPdu": {
+					"ngapIeType" : "NRPPA_PDU",
+					"ngapData": {
+						"contentId": "n2msg"
+					}
 				}
 			}
 		}
-	}
 	}`
 	N1_MSG_HEX := ""
 	N2_MSG_HEX := "00 09 00 02 00 00"
@@ -71,7 +74,7 @@ func main() {
 	// sb.WriteString("\0")
 
 	// What is UE Context? For now it is 1.
-	req, err := http.NewRequest("POST", "http://192.168.70.132:8080/namf-comm/v1/ue-contexts/1/n1-n2-messages", strings.NewReader(sb.String()))
+	req, err := http.NewRequest("POST", "http://192.168.70.132:8080/namf-comm/v1/ue-contexts/imsi-001010000000001/n1-n2-messages", strings.NewReader(sb.String()))
 	if err != nil {
 		fmt.Println(err)
 	}
