@@ -48,7 +48,7 @@ func main() {
 		}
 	}`
 	N1_MSG_HEX := ""
-	N2_MSG_HEX := "00 09 00 02 00 00"
+	N2_MSG_HEX := "00 09 00 00 7b 03 00 00 00"
 	N2_MSG_HEX = strings.Replace(N2_MSG_HEX, " ", "", -1)
 	n2MsgBytes, err := hex.DecodeString(N2_MSG_HEX)
 	if err != nil {
